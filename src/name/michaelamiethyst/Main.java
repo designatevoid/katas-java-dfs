@@ -1,10 +1,11 @@
 package name.michaelamiethyst;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
-    List<Node> nodes = new List<>();
+    private final List<GraphNode> nodes = new ArrayList<>();
 
     public static void main(String[] args) {
         Main main = new Main();
@@ -17,10 +18,9 @@ public class Main {
     }
 
     public void initDfs() {
-        // name, link1, link2
-        createNode(0, 1, 2);
-        createNode(1, 2);
-        createNode(2, 0, 3);
-        createNode(3, 3);
+        nodes.add(new GraphNode(0, 1, 2));
+        nodes.add(new GraphNode(1, 2));
+        nodes.add(new GraphNode(2, 0, 3));
+        nodes.add(new GraphNode(3, 3));
     }
 }
